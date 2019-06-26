@@ -33,7 +33,7 @@ for i in range(rows):
         
         if word[0] == grid[i][j]:
             
-            if index_found and check_word_exists(grid,word,cols,rows,i,j, 0):
+            if check_word_exists(grid,word,cols,rows,i,j, 0):
                 is_found.extend(['Yes'])
             else:
                 is_found.extend(['No'])
