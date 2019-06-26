@@ -7,7 +7,12 @@ def check_word_exists(grid,word,cols,rows,i, j,index):
         return False
   
     if word[index] == grid [i][j]:
-
+        
+        new_str = list(grid [i])
+        new_str[j] = '*'    #added this change
+        grid [i]= ''.join(new_str)
+        
+        
         if index == len(word)-1:
             return True
        
@@ -22,7 +27,7 @@ def check_word_exists(grid,word,cols,rows,i, j,index):
         return False
 
 grid = ['axmy', 'bgdf','xeet','raks']
-word = 'geek'
+word = 'gdg'
 rows = 4
 cols = 4
 is_found = []
